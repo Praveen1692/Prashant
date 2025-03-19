@@ -8,6 +8,7 @@ import {
   FaUsersCog,
   FaGlobe,
 } from "react-icons/fa";
+import Us from "../../public/Us.jpeg";
 
 function Main() {
   const steps = [
@@ -23,9 +24,19 @@ function Main() {
     },
     {
       title: "Overseas Manpower Solutions",
-      image:
-        "https://soundlinesgroup.com/wp-content/uploads/2023/07/Best-Overseas-Manpower-Agency-in-India_1-1.jpg", // Placeholder image
+      image:Us, // Placeholder image
     },
+  ];
+
+
+
+  const stepss = [
+    "Client Requirement Gathering",
+    "Screening & Shortlisting",
+    "Client Interview & Selection",
+    "Final Selection & Confirmation",
+    "Visa & Travel Processing",
+    "Deployment & On-Site Placement",
   ];
 
   const onSubmit = async (event) => {
@@ -388,33 +399,55 @@ function Main() {
 
         {/* Our Process Section */}
         <div className="bg-white shadow-md rounded-lg overflow-hidden">
-          <div className="bg-gradient-to-r from-red-500 to-purple-500 p-8 text-center">
-            <h2 className="text-3xl font-bold text-white">Our Process</h2>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-4 p-8 relative">
-            {[
-              "Client Requirement Gathering",
-              "Screening & Shortlisting",
-              "Client Interview & Selection",
-              "Final Selection & Confirmation",
-              "Visa & Travel Processing",
-              "Deployment & On-Site Placement",
-            ].map((step, index) => (
-              <div
-                key={index}
-                className="relative bg-white p-4 rounded-lg shadow-md text-center rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300"
+      <div className="bg-gradient-to-r from-red-500 to-purple-500 p-8 text-center">
+        <h2 className="text-3xl font-bold text-white">Our Process</h2>
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-6 p-8 relative">
+        {stepss.map((step, index) => (
+          <div
+            key={index}
+            className="relative bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 group flex flex-col items-center justify-center min-h-[120px]"
+          >
+            {/* Step Number */}
+           
+            <h3 className="text-lg font-semibold text-gray-800 mt-4">{step}</h3>
+            {/* Arrow */}
+            {index < stepss.length - 1 && (
+              <svg
+                className="hidden lg:block absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2"
+                width="40"
+                height="20"
+                viewBox="0 0 40 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <div className="absolute -top-2 -left-2 bg-red-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">
-                  {index + 1}
-                </div>
-                <h3 className="text-lg font-semibold mb-2">{step}</h3>
-                {index < 5 && ( // No arrow after the last step
-                  <FaArrowRight className="hidden lg:block absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600" />
-                )}
-              </div>
-            ))}
+                <line
+                  x1="0"
+                  y1="10"
+                  x2="34"
+                  y2="10"
+                  stroke="#D1D5DB" // gray-300
+                  strokeWidth="2"
+                  className="group-hover:stroke-gray-500 transition-all duration-300"
+                />
+                <path
+                  d="M30 6L36 10L30 14"
+                  stroke="#D1D5DB" // gray-300
+                  strokeWidth="2"
+                  fill="none"
+                  className="group-hover:stroke-gray-500 transition-all duration-300"
+                />
+              </svg>
+            )}
           </div>
-        </div>
+        ))}
+      </div>
+    </div>
+
+
+
+
+       
 
         {/* Services Section with Images */}
 
@@ -429,9 +462,7 @@ function Main() {
                 className="relative bg-white p-4 rounded-lg shadow-md text-center rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300"
               >
                 {/* Step Number */}
-                <div className="absolute -top-2 -left-2 bg-red-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">
-                  {index + 1}
-                </div>
+               
                 {/* Image */}
                 <div className="mb-4">
                   <img
@@ -443,9 +474,7 @@ function Main() {
                 {/* Title */}
                 <h3 className="text-lg font-semibold mb-2">{step.title}</h3>
                 {/* Arrow (hidden on last step) */}
-                {index < steps.length - 1 && (
-                  <FaArrowRight className="hidden lg:block absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600 text-xl" />
-                )}
+               
               </div>
             ))}
           </div>
@@ -466,7 +495,7 @@ function Main() {
             <div className="bg-gradient-to-r from-red-600 to-purple-700 p-8 rounded-3xl text-white max-w-5xl mx-auto flex flex-col md:flex-row">
               {/* Left section with heading */}
               <div className="md:w-1/3 mb-8 md:mb-0">
-                <h1 className="text-5xl font-bold leading-tight mb-4">
+                <h1 className="text-5xl font-bold leading-tight text-center mt-18">
                   Get More Information
                 </h1>
               </div>
@@ -559,10 +588,10 @@ function Main() {
                   <div className="space-y-6">
                     <div className="flex items-start">
                       <div className="mr-4 mt-1">
-                        <div className="border-2 border-white p-2 rounded-md">
+                        <div className="border-2 border-white p-2 rounded-md mt-32">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
-                            className="h-6 w-6"
+                            className="h-8 w-8"
                             fill="none"
                             viewBox="0 0 24 24"
                             stroke="currentColor"
@@ -587,7 +616,7 @@ function Main() {
                         {/* Uttar Pradesh Address */}
                         <div>
                           <h3 className="font-bold text-xl">Uttar Pradesh</h3>
-                          <p>24A. Jamalpur,</p>
+                          <p>24-A. Jamalpur,</p>
                           <p>Aligarh - 200201</p>
                         </div>
 
