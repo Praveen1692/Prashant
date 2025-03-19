@@ -21,6 +21,9 @@ function Main() {
     
         if (res.success) {
           console.log("Success", res);
+          // Reset the form
+          event.target.reset();
+          alert("Thank you for your enquiry! We'll get back to you soon.");
         }
       };
   return (
