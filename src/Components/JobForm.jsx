@@ -38,7 +38,7 @@ const JobForm = () => {
     for (const [key, value] of Object.entries(formData)) {
       formDataToSend.append(key, value);
     }
-    formDataToSend.append("access_key", "d825a96b-ff6f-4fa3-b17b-fdf1edf1d40d");
+    formDataToSend.append("access_key", "278ed9da-d039-4c12-8c63-15c352e2d00a");
 
     try {
       const res = await fetch("https://api.web3forms.com/submit", {

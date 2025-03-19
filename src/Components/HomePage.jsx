@@ -65,7 +65,7 @@ function HomePage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
-              className="bg-white/95 backdrop-blur rounded-lg shadow-2xl p-8 max-w-2xl mx-auto"
+              className="bg-white backdrop-blur rounded-lg shadow-2xl p-8 max-w-2xl mx-auto"
             >
               <div className="text-center mb-8">
                 <div className="flex justify-center items-center mb-6">
