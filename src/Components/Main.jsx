@@ -695,7 +695,7 @@ function Main() {
         <footer className="bg-gradient-to-r from-red-600 to-purple-700 text-white py-6 sm:py-8">
           <div className="container mx-auto text-center px-4 sm:px-6">
             <p className="text-base sm:text-lg">
-              &copy; 2025 Industrial Talent Nexus. All rights reserved.
+              &copy;  Industrial Talent Nexus. All rights reserved.
             </p>
           </div>
         </footer>
